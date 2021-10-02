@@ -9,7 +9,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Trabalho PPM - Calculadora IMC Flutter',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
@@ -74,12 +74,12 @@ class _MyHomePageState extends State<MyHomePage> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           TextFormField(
-            decoration: const InputDecoration(labelText: "Peso"),
+            decoration: const InputDecoration(labelText: "Peso (KG)"),
             keyboardType: TextInputType.number,
             controller: peso,
           ),
           TextFormField(
-            decoration: const InputDecoration(labelText: "Altura"),
+            decoration: const InputDecoration(labelText: "Altura (Metros)"),
             keyboardType: TextInputType.number,
             controller: altura,
           ),
@@ -88,7 +88,7 @@ class _MyHomePageState extends State<MyHomePage> {
               child: Text("Calcular IMC"),
               style: TextButton.styleFrom(
                   primary: Colors.white, backgroundColor: Colors.blue)),
-          Text("Seu ICM é: " + _imc.toString()),
+          Text("Seu IMC é: " + _imc.toString()),
           RichText(
             text: new TextSpan(
               style: new TextStyle(
